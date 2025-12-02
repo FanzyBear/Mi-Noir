@@ -32,16 +32,32 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
 
   .main-left {
-    border: 1px solid var(--white);
-    color: var(--white);
+    img {
+      box-shadow: var(--black) -28px 28px 0px -2px, var(--white) -28px 28px;
+    }
   }
   .main-right {
-    border: 1px solid var(--white);
-    max-width: 410px;
+    max-width: 420px;
     color: var(--white);
+
+    .main-right-top {
+      p {
+        font-size: 50px;
+        line-height: 58px;
+        font-weight: bold;
+      }
+    }
+    .main-right-bot {
+      p {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 1px;
+        text-align: justify;
+      }
+    }
   }
 }
 /*  */
@@ -60,20 +76,23 @@ nav {
     color: var(--white);
     max-width: 300px;
     align-items: center;
+    gap: 14px;
 
     .member-nickname {
       p {
-        font-size: 40px;
+        font-size: 35px;
       }
     }
     .member-specialty {
       p {
-        font-size: 28px;
+        font-size: 18px;
+        text-align: center;
       }
     }
     .member-quote {
       p {
-        font-size: 28px;
+        font-size: 18px;
+        text-align: center;
       }
     }
   }
