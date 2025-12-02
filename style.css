@@ -1,0 +1,21 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --grey: #a9a9a9;
+  --dark-blue: #64809b;
+  --light-blue: #9bc6f0;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+/*  */
+/*  */
+/*  */
+.section {
+  min-height: 100vh;
+}
