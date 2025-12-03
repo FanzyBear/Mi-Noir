@@ -192,3 +192,32 @@ nav {
     }
   }
 }
+/*  */
+/* CTFS */
+/*  */
+.section-ctfs {
+}
+/*  */
+/* FOOTER */
+/*  */
+footer {
+  /* height: 60px; */
+  /* background-color: #303030; */
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .footer-inside {
+    padding: 18px 0 38px 0;
+    width: 80%;
+    border-top: 2px solid #383838;
+    color: #a9a9a9;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
