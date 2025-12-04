@@ -228,14 +228,14 @@ nav {
   .ctfs-container-group {
     display: flex;
     gap: 35px;
-    border: 1px solid var(--white);
     animation: carousel 18s infinite linear;
     padding-right: 35px;
 
     .ctfs-list {
       width: 300px;
-      height: 420px;
-      border: solid 1px var(--white);
+      height: 300px;
+      /*  */
+      perspective: 1000px;
     }
   }
 }
@@ -247,6 +247,36 @@ nav {
     translate: -100%;
   }
 }
+.ctf-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+.ctfs-list:hover .ctf-inner {
+  transform: rotateY(180deg);
+}
+.ctf-front,
+.ctf-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.ctf-front {
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 100%;
+}
+.ctf-back {
+  background-color: var(--white);
+  color: var(--black);
+  transform: rotateY(180deg);
+  border-radius: 100%;
+}
+
 /*  */
 /* FOOTER */
 /*  */
