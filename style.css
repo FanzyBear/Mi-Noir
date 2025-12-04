@@ -1,9 +1,6 @@
 :root {
   --black: #000000;
   --white: #ffffff;
-  --grey: #a9a9a9;
-  --dark-blue: #64809b;
-  --light-blue: #9bc6f0;
 }
 * {
   padding: 0;
@@ -80,7 +77,11 @@ nav {
 
   .main-left {
     img {
-      box-shadow: var(--black) -28px 28px 0px -2px, var(--white) -28px 28px;
+      /* box-shadow: var(--black) -28px 28px 0px -2px, var(--white) -28px 28px; */
+      box-shadow: rgba(255, 255, 255, 0.4) -5px 5px,
+        rgba(255, 255, 255, 0.3) -10px 10px, rgba(255, 255, 255, 0.2) -15px 15px,
+        rgba(255, 255, 255, 0.1) -20px 20px,
+        rgba(255, 255, 255, 0.05) -25px 25px;
     }
   }
   .main-right {
@@ -101,6 +102,11 @@ nav {
         line-height: 28px;
         letter-spacing: 1px;
         text-align: justify;
+
+        a {
+          text-decoration: none;
+          color: var(--white);
+        }
       }
     }
   }
@@ -218,8 +224,11 @@ nav {
 }
 .ctfs-container {
   display: flex;
+  align-items: center;
   max-width: 100%;
   overflow-x: hidden;
+  height: 335px;
+  overflow-y: hidden;
 
   &::-webkit-scrollbar {
     display: none;
@@ -232,8 +241,8 @@ nav {
     padding-right: 35px;
 
     .ctfs-list {
-      width: 300px;
-      height: 300px;
+      width: 325px;
+      height: 325px;
       /*  */
       perspective: 1000px;
     }
@@ -255,7 +264,7 @@ nav {
   transform-style: preserve-3d;
 }
 .ctfs-list:hover .ctf-inner {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 .ctf-front,
 .ctf-back {
@@ -271,10 +280,50 @@ nav {
   border-radius: 100%;
 }
 .ctf-back {
-  background-color: var(--white);
-  color: var(--black);
-  transform: rotateY(180deg);
+  background-color: transparent;
+  border: 3px solid var(--white);
+  /* background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3); */
+  /* color: var(--black); */
+  transform: rotateY(-180deg);
   border-radius: 100%;
+}
+.ctf-back-inner {
+  height: 88%;
+  margin: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+
+  .ctf-year {
+    p {
+      font-size: 18px;
+    }
+  }
+  .ctf-name {
+    margin-bottom: 8px;
+    p {
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
+  .ctf-placement {
+    p {
+      font-size: 20px;
+    }
+  }
+  .ctf-writeup {
+    margin-top: auto;
+    a {
+      font-size: 18px;
+      text-decoration: none;
+      color: var(--white);
+    }
+  }
 }
 
 /*  */
